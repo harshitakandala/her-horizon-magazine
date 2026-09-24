@@ -1,0 +1,50 @@
+h1, h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  font-family: 'Playfair Display', serif; 
+}
+
+p  {
+  font-family: 'Poppins', sans-serif;    
+  text-align: justify;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.articlecontainer {
+  max-width: 800px;     
+  margin: 60px auto;     
+  padding: 0 20px;
+  line-height: 1.8;
+}
+
+.article-title {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.author {
+  color: gray;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.article-image {
+  width: 60%;
+  display: block; 
+  border-radius: 10px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.para1::first-letter {
+  font-size: 40px;
+  font-weight: bold;
+  float: left;
+  margin-right: 6px;
+  margin-top: -8px;  
+  line-height: 1;
+}

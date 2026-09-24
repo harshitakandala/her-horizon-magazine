@@ -1,0 +1,26 @@
+.navbar{
+    width: 96%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;  
+    gap: 30px;                   
+    padding: 20px;
+    background-color: #f1d3df;
+}
+img.logo{
+    max-width: 150px;
+    height: auto;
+}
+
+.links{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #2f020c;
+  font-weight: 500;
+}

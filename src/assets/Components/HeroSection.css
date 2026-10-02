@@ -3,91 +3,159 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    z-index: 2;
+}
+.herocontainer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(240, 200, 215, 0.4);
+    z-index: 1;
 }
 img.background {
     background-size: cover;
+    position: absolute;
     width: 100%;
-    object-fit: fill;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-img.image1 {
-    position: absolute;
-    top: 0;
-    right: 0;  
-    z-index: 2;
-    max-width: 40%;   
-    height: auto;
+    height: 100%;
     object-fit: cover; 
-    transition: transform 0.4s ease;
+    z-index: 0;
+    overflow: hidden;
 }
-img.image2 {
+.heroimages{
     position: absolute;
-    top: 55%;
-    left: 25%;  
-    z-index: 3;
-    width: 280px;          
-    height: 300px;        
-    object-fit: cover;    
-    object-position: bottom; 
-    transition: transform 0.4s ease;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
 }
-img.image3 {
+
+.heroimages img {
     position: absolute;
-    top: 5%;
-    left: 2%;  
-    z-index: 4;
-    width: 280px;          
-    height: 320px;        
-    object-fit: cover;    
-    object-position: top;
-    transition: transform 0.4s ease;
+    width: clamp(150px, 15vw, 260px);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
 }
-img.image4 {
-    position: absolute;
-    top: 55%;
-    left: 2%;  
-    z-index: 5;
-    width: 250px;          
-    height: auto;        
-    object-fit: cover;    
-    transition: transform 0.4s ease;
-}
-.heroimages >  img:hover{
+
+.left img:hover {
     transform: scale(1.05);
+}
+.right img:hover {
+    transform: scale(1.05);
+}
+
+.image1 {
+    top: 8%;
+    left: 8%;
+}
+
+.image2 {
+    top: 50%;
+    left: 8%;
+}
+
+.image3 {
+    top: 12%;
+    right: 8%;
+}
+
+.image4 {
+    top: 50%;
+    right: 7%;
+}
+
+.image5 {
+    top: 3%;
+    left: 58%;
+    transform: translateX(-50%);
+    width: clamp(350px, 18vw, 320px) !important;
+    max-width: 100%; 
+    z-index: 2;
 }
 
 .slogan{
     position: absolute;
-    font-family: 'Inter';
-    z-index: 6;
-    justify-items: left;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+    bottom: 15vh;
+    font-family: "Climate Crisis", sans-serif;
     color: white;
-    top: 10%;
-    left: 30%;
+    letter-spacing: 3px;
+    top: 63%;
+}
+
+.slogan h1 {
+    font-size: clamp(30px, 1.8vw, 35px);
+    font-weight: 200;
 }
 
 .logotext{
-    font-size: 50px;
+    position: absolute;
+    z-index: 3;
+    text-align: left;
+    font-size: clamp(40px, 6vw, 60px);
+    transform: translate(-50%, -50%);
+    top: 38%;
+    left: 50%;
+    margin: 0;
     letter-spacing: 2px;
-    position: relative;
-    display: inline-block;
-    top: 30%;
-    left: 30%;
-    z-index: 11;
-    
+    line-height: 0.5;
 }
 .logotext .her {
-  color: #f6bad6;
-  text-shadow:
+    color: #f6bad6;
+    text-shadow:
     4px 4px 0 #7a2c2c;
 }
 
 .logotext .horizon {
-  color: #d488ad;
-  text-shadow:
+    color: #d488ad;
+    text-shadow:
     4px 4px 0 #7a2c2c;
+}
+
+@media (max-width: 768px) {
+  .heroimages {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .heroimages .left,
+  .heroimages .right {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .image5 {
+    display: none;
+  }
+
+  .logotext h1 {
+    font-size: 7vh;
+  }
+
+  .slogan h1{
+    font-size: 16px;
+  }
+  .slogan{
+    bottom: 18%;
+    align-content: end;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .image5{
+        display: none;
+    }
+    .slogan{
+    bottom: 30% !important;
+    align-content: end;
+    }
+    .heroimages img{
+    width: clamp(180px, 15vw, 260px);
+    }
 }

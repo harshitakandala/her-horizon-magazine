@@ -1,0 +1,10 @@
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+.bg{
+    background: linear-gradient(to bottom, #e6c3cf, #d9aebc);
+}

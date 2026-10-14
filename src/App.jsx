@@ -3,6 +3,7 @@ import Navbar from './assets/Components/Navbar'
 import HeroSection from './assets/Components/HeroSection'
 import GoToTop from './assets/Components/GoToTop';
 import AboutUs from './assets/Components/AboutUs';
+import Article from "./assets/Components/Article";
 import './index.css';
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HeroSection />} />
         <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/article/:id" element={<Article />} />
       </Routes>
     </div>
   )
